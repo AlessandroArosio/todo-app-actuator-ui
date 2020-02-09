@@ -1,1 +1,8 @@
-<p>health works!</p>
+<p>The status is: {{ health.status }}</p>
+<p>Database is: {{ health.components.db.details.database }}</p>
+<p>Disk space is: {{ health.components.diskSpace.status }}</p>
+<p>Free memory is:
+  {{ health.components.diskSpace.details.free / 8589934592 | number :  '1.2-2' }} GB
+  out of
+  {{ health.components.diskSpace.details.total / 8589934592 | number:  '1.2-2' }} GB
+</p>
