@@ -1,8 +1,52 @@
-<div style="text-align: center">
-  <h1>
-    ToDo-App Actuator dashboard
-  </h1>
-  <app-health></app-health>
+<!--<div style="text-align: center">-->
+<!--  <h1>-->
+<!--    ToDo-App Actuator dashboard-->
+<!--  </h1>-->
+<!--  <app-health></app-health>-->
+<!--</div>-->
+
+<div class="page-wrapper">
+
+  <!-- MENU SIDEBAR-->
+  <aside class="menu-sidebar d-none d-lg-block">
+    <div class="logo">
+      <a href="#">
+        <img src="assets/images/scotland.png" alt="scotland" class="img-responsive">
+      </a>
+    </div>
+    <app-endpoint-category></app-endpoint-category>
+  </aside>
+  <!-- END MENU SIDEBAR-->
+  <!-- PAGE CONTAINER-->
+  <div class="page-container">
+    <!-- HEADER DESKTOP-->
+    <header class="header-desktop">
+      <div class="section-content section-content-p30">
+        <div class="container-fluid">
+          <div class="header-wrap">
+            <h1>Actuator UI</h1>
+          </div>
+          <div class="account-wrap"></div>
+        </div>
+      </div>
+    </header>
+    <!-- END HEADER DESKTOP-->
+
+    <!-- MAIN CONTENT-->
+
+    <div class="main-content">
+      <div class="section-content section-content-p30">
+        <div class="container-fluid">
+          <div class="row">
+
+            <p>Placeholder for now</p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <router-outlet></router-outlet>
+  </div>
 </div>
 
 <!--<router-outlet></router-outlet>-->

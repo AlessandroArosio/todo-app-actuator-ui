@@ -5,14 +5,16 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {HealthService} from './services/health-service/health.service';
+import { ActuatorService } from './services/actuator-service/actuator.service';
 import { HealthComponent } from './components/health/health.component';
-import {GaugeChartModule} from 'angular-gauge-chart';
+import { GaugeChartModule } from 'angular-gauge-chart';
+import { EndpointCategoryComponent } from './components/endpoint-category/endpoint-category.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HealthComponent
+    HealthComponent,
+    EndpointCategoryComponent
   ],
   imports: [
     BrowserModule,
@@ -21,7 +23,7 @@ import {GaugeChartModule} from 'angular-gauge-chart';
     HttpClientModule,
     GaugeChartModule
   ],
-  providers: [HealthService],
+  providers: [ActuatorService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {HealthService} from '../../services/health-service/health.service';
+import {ActuatorService} from '../../services/actuator-service/actuator.service';
 import {Health} from '../../common/health/health';
 
 @Component({
@@ -10,7 +10,7 @@ import {Health} from '../../common/health/health';
 export class HealthComponent implements OnInit {
   private health: Health;
 
-  constructor(private healthService: HealthService) { }
+  constructor(private healthService: ActuatorService) { }
 
   ngOnInit() {
     this.getHealth();
