@@ -10,14 +10,14 @@ import {Health} from '../../common/health/health';
 export class HealthComponent implements OnInit {
   private health: Health;
 
-  constructor(private healthService: ActuatorService) { }
+  constructor(private actuatorService: ActuatorService) { }
 
   ngOnInit() {
     this.getHealth();
   }
 
   getHealth() {
-    this.healthService.getHealth().subscribe(
+    this.actuatorService.getHealth().subscribe(
       data => this.health = data,
       error => console.log(error)
     );

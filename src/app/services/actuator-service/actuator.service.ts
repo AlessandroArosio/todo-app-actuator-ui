@@ -3,6 +3,7 @@ import { HttpClient, HttpHeaders} from '@angular/common/http';
 import { Observable } from 'rxjs';
 import {Health} from '../../common/health/health';
 import {map} from 'rxjs/operators';
+import {Actuator} from '../../common/actuator/actuator';
 
 const baseUrl = '/server/actuator';
 const httpOptions = {
@@ -22,9 +23,20 @@ export class ActuatorService {
     );
   }
 
-  getActuatorEndpoints(): Observable<any> {
+  getActuatorEndpoints(): Observable<Actuator[]> {
     return this.http.get(`${baseUrl}`).pipe(
-      map((data: any) => data)
+      map((data: Actuator) => {
+        const actList: Actuator[] = [];
+        // @ts-ignore
+        const obj = data._links;
+        const strings = Object.keys(obj);
+        for (let st of strings) {
+          let element: Actuator = new Actuator();
+          element.name = st;
+          actList.push(element);
+        }
+        return actList;
+      })
     );
   }
 }

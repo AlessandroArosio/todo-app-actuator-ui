@@ -1,8 +1,9 @@
 <div class="menu-sidebar-content js-scrollbar1">
   <nav class="navbar-sidebar">
     <ul class="list-unstyled navbar-list">
-      <li>One link</li>
-      <li>Two link</li>
+      <li *ngFor="let entry of endpointList">
+        <a href="#">{{ entry.name }}</a>
+      </li>
     </ul>
   </nav>
 </div>
