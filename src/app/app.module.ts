@@ -9,12 +9,14 @@ import { ActuatorService } from './services/actuator-service/actuator.service';
 import { HealthComponent } from './components/health/health.component';
 import { GaugeChartModule } from 'angular-gauge-chart';
 import { EndpointCategoryComponent } from './components/endpoint-category/endpoint-category.component';
+import { HomePageComponent } from './components/home-page/home-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HealthComponent,
-    EndpointCategoryComponent
+    EndpointCategoryComponent,
+    HomePageComponent
   ],
   imports: [
     BrowserModule,

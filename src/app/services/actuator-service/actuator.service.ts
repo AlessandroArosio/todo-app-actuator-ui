@@ -32,7 +32,7 @@ export class ActuatorService {
         const strings = Object.keys(obj);
         for (let st of strings) {
           let element: Actuator = new Actuator();
-          element.name = st;
+          element.name = st[0].toUpperCase() + st.slice(1);
           actList.push(element);
         }
         return actList;

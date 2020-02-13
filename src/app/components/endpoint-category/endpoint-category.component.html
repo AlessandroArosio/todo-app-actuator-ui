@@ -2,7 +2,8 @@
   <nav class="navbar-sidebar">
     <ul class="list-unstyled navbar-list">
       <li *ngFor="let entry of endpointList">
-        <a href="#">{{ entry.name }}</a>
+        <a routerLink="/{{ entry.name[0].toLowerCase() + entry.name.slice(1) }}"
+           routerLinkActive="active-link">{{ entry.name }}</a>
       </li>
     </ul>
   </nav>

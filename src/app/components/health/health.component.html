@@ -1,8 +1,16 @@
-<p>The status is: {{ health.status }}</p>
-<p>Database is: {{ health.components.db.details.database }}</p>
-<p>Disk space is: {{ health.components.diskSpace.status }}</p>
-<p>Free memory is:
-  {{ health.components.diskSpace.details.free / 8589934592 | number :  '1.2-2' }} GB
-  out of
-  {{ health.components.diskSpace.details.total / 8589934592 | number:  '1.2-2' }} GB
-</p>
+<div class="main-content">
+  <div class="section-content section-content-p30">
+    <div class="container-fluid">
+        <h2>Server's health page</h2>
+        <p>The status is: {{ health.status }}</p>
+<!--        <img src="{{ tempProduct.imageUrl }}" class="img-responsive">-->
+        <p>Database is: {{ health.components.db.details.database }}</p>
+        <p>Disk space is: {{ health.components.diskSpace.status }}</p>
+        <p>Free memory is:
+          {{ health.components.diskSpace.details.free / 8589934592 | number :  '1.2-2' }} GB
+          out of
+          {{ health.components.diskSpace.details.total / 8589934592 | number:  '1.2-2' }} GB
+        </p>
+    </div>
+  </div>
+</div>
