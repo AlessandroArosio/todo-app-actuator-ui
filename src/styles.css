@@ -524,7 +524,7 @@ input.au-input.au-input-xl{
 * ----------------------------
 */
 
-.product-box img {
+.endpoint-box img {
   width: 150px;
 }
 
@@ -537,7 +537,7 @@ input.au-input.au-input-xl{
   outline: 0;
   margin-left: 5px;
 }
-.product-box{
+.endpoint-box{
   margin-bottom:60px
 }
 .price{
@@ -545,7 +545,7 @@ input.au-input.au-input-xl{
   font-weight:800;
   color:#0da8e4
 }
-.product-box h1{
+.endpoint-box h1{
   font-size:18px;
   border-bottom:1px solid #ccc;
   padding-bottom:5px;
@@ -553,7 +553,7 @@ input.au-input.au-input-xl{
   padding-top:12px;
   margin-bottom:7px
 }
-.product-box h2{
+.endpoint-box h2{
   font-size:15px;
   padding-bottom:0;
   font-weight:500;
@@ -833,7 +833,10 @@ footer ul li{
     display:none
   }
 }
-
+.home-content {
+  margin-bottom: 2rem;
+  color: crimson;
+}
 
 @media (max-width:991px){
   .section-content-p30{
@@ -974,8 +977,8 @@ footer ul li{
   .footer-pagination{
     text-align:center
   }
-  .product-box{
-    text-align:centerg
+  .endpoint-box{
+    text-align:center
   }
   .page-container{
     position:relative;

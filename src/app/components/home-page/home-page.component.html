@@ -1,8 +1,17 @@
 <div class="main-content">
   <div class="section-content section-content-p30">
+    <h2 class="home-content">Home page under construction</h2>
     <div class="container-fluid">
-      <h2>Home page under construction</h2>
-      <p>place holder for clickable icons</p>
+      <div class="row">
+        <div *ngFor="let element of endpointList" class="col-md-3">
+          <div class="endpoint-box">
+            <a routerLink="/{{ element.name[0].toLowerCase() + element.name.slice(1) }}">
+              <img src="assets/images/{{ element.name }}.png" alt="{{ element.name }}" class="img-responsive">
+            </a>
+            <h1>{{ element.name }}</h1>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {ActuatorService} from '../../services/actuator-service/actuator.service';
+import {Actuator} from '../../common/actuator/actuator';
 
 @Component({
   selector: 'app-home-page',
@@ -6,10 +8,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home-page.component.css']
 })
 export class HomePageComponent implements OnInit {
+  endpointList: Actuator[] = [];
 
-  constructor() { }
+  constructor(private actuatorService: ActuatorService) { }
 
   ngOnInit() {
+    this.getEndpoints();
   }
 
+  getEndpoints() {
+    this.actuatorService.getActuatorEndpoints().subscribe(
+      data => this.endpointList = data
+    );
+  }
 }
