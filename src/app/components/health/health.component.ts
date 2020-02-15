@@ -13,7 +13,7 @@ export class HealthComponent implements OnInit {
   private currentMemory: string;
 
   public allDataFetched = false;
-  public canvasWidth = 300;
+  public canvasWidth = 220;
   public needleValue = 65;
   public centralLabel = '';
   public name = 'Disk space in use';
