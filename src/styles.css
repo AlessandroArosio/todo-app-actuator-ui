@@ -837,6 +837,13 @@ footer ul li{
   margin-bottom: 2rem;
   color: crimson;
 }
+.health-info p{
+  padding-top: 1vh;
+  padding-bottom: 2vh;
+}
+.health-images {
+  max-width: 40px;
+}
 
 @media (max-width:991px){
   .section-content-p30{
