@@ -12,6 +12,7 @@ export class HealthComponent implements OnInit {
   private maxMemory = ' GB';
   private currentMemory: string;
 
+  public connectionEstablished = false;
   public allDataFetched = false;
   public canvasWidth = 220;
   public needleValue = 65;
@@ -38,9 +39,12 @@ export class HealthComponent implements OnInit {
     this.actuatorService.getHealth().subscribe(
       data => {
         this.health = data;
+        this.connectionEstablished = true;
         this.updateGauge();
         },
-      error => console.log(error)
+      error => {
+        console.log(error);
+      }
     );
   }
 

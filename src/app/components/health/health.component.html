@@ -2,8 +2,8 @@
   <div class="section-content section-content-p30">
     <div class="container-fluid">
       <h2>Server's health page</h2>
-      <div class="health-info">
-        <p *ngIf="health.status === 'UP' else down">
+      <div *ngIf="connectionEstablished; else down" class="health-info">
+        <p>
           Server status:
           <img src="assets/images/up.png" alt="up" class="health-images"/>
         </p>
@@ -19,12 +19,12 @@
             [name]="name"
             [bottomLabel]="bottomLabel"></rg-gauge-chart>
         </div>
-        <ng-template #down>
-          <p>Server status:
-            <img src="assets/images/down.png" alt="up" class="health-images"/>
-          </p>
-        </ng-template>
       </div>
+      <ng-template #down>
+        <p>Server status:
+          <img src="assets/images/down.png" alt="down" class="health-images"/>
+        </p>
+      </ng-template>
     </div>
   </div>
 </div>
